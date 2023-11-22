@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+section.conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 400px;
+  margin-top: 30px;
+}
+section.conteiner h1 {
+  color: rgb(162, 89, 230);
+  font-family: monospace;
+}
+section.conteiner p {
+  font-size: 1.2rem;
+  font-family: "Arial";
+}
+section.conteiner button.botao {
+  background-color: rgb(162, 89, 230);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  border: 0px;
+}
+
+ul.lista {
+  text-align: center;
+}
+ul.lista li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  background-color: rgb(162, 89, 230);
+}
+ul.lista li:hover {
+  background-color: rgb(255, 81, 0);
+}
+ul.lista li a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: white;
+}
+ul.lista li a:before {
+  content: "";
+  background-color: rgb(255, 81, 0);
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  bottom: -20px;
+}
