@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+main.conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 400px;
+  margin-top: 30px;
+}
+main.conteiner h1 {
+  color: rgb(82, 96, 252);
+  font-family: monospace;
+}
+main.conteiner p {
+  font-size: 1.2rem;
+  font-family: "Arial";
+}
+main.conteiner button.botao {
+  background-color: rgb(82, 96, 252);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  border: 0px;
+}

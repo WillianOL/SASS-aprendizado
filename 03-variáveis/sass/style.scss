@@ -1,0 +1,47 @@
+// Criação de variáveis com SCSS
+// A ordem de declaração importa!
+$cor-principal: rgb(82, 96, 252);
+$font-primaria: monospace;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+main.conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 400px;
+  margin-top: 30px;
+
+  h1 {
+    color: $cor-principal;
+    font-family: $font-primaria;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-family: 'Arial';
+  }
+
+  button.botao {
+    background-color: $cor-principal;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: $font-primaria;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    border: 0px;
+  }
+}
