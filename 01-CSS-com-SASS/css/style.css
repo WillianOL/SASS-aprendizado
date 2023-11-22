@@ -10,7 +10,7 @@ div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #333;
+  background-color: #227;
 }
 div button {
   background-color: pink;
