@@ -3,6 +3,7 @@
 $cor-principal: rgb(162, 89, 230);
 $cor-secundaria: rgb(255, 81, 0);
 $font-primaria: monospace;
+$gutter: 25;
 
 // Forma de escrevermos partes de códigos que vai ser reutilizada.
 @mixin estilo-do-titulo {
@@ -46,7 +47,7 @@ $font-primaria: monospace;
 body {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   flex-direction: column;
   height: 100vh;
 }
@@ -149,4 +150,21 @@ body {
     }
     background-color: rgb(95, 95, 95) !important;
   }
+}
+
+h1 {
+  @include estilo-do-titulo
+}
+
+// Operadores. Não precisa dizer exatemente o tipo do valor.
+p.operador {
+  font-size: 0.2em + 1; // 1.2em
+}
+
+div.conteinerOperador {
+  width: 80vw - $gutter; // 55vw
+  height: 100px + 100; // 200px
+  border: (5px + $gutter) solid $cor-principal; // 30px
+  padding: $gutter;
+  background-color: #333;
 }
