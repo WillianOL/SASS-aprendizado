@@ -23,12 +23,12 @@ section.conteiner {
   flex-direction: column;
   gap: 30px;
   align-items: flex-start;
-  max-width: 400px;
+  max-width: 500px;
   margin-top: 30px;
 
   h1 {
-    color: $cor-principal;
-    font-family: $font-primaria;
+    @include estilo-do-titulo;
+    @include separador($cor-secundaria, 50px);
   }
 
   p {
