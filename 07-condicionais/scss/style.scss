@@ -1,0 +1,97 @@
+$tema: oceano;
+$primary-color: black;
+$secundary-color: gray;
+$cor-fundo: red;
+
+// Forma de fazermos condicionais no SCSS
+// Se o tema tiver o valor oceano, muda as cores. Se for deserto 
+// muda para outras cores
+@if $tema == oceano {
+  $primary-color: blue;
+  $secundary-color: orange;
+  $cor-fundo: rgb(10, 146, 151);
+} @else if $tema == deserto {
+  $primary-color: yellow;
+  $secundary-color: rgb(116, 6, 190);
+  $cor-fundo: rgb(216, 190, 142);
+}
+
+// Utilizando condicionais dentro de mixins - tamanho de fonte
+@mixin type-primary($tamanho) {
+  font-family: monospace;
+  @if $tamanho == normal {
+    font-size: 1em;
+  } @else if $tamanho == medio {
+    font-size: 1.25em;
+  } @else if $tamanho == grande {
+    font-size: 1.5em;
+  }
+}
+// Modificando a sombra
+@mixin shadow($tipo) {
+  @if $tipo == 1 {
+    box-shadow: 5px 5px 5px 0 #000;
+  } @else if $tipo == 2 {
+    box-shadow: 15px 15px 15px 0 #333;
+  } @else if $tipo == 3 {
+    box-shadow: 25px 25px 25px 0 #666;
+  }
+}
+// mixin de responsivo
+@mixin device($tipo) {
+  @if $tipo == m {
+    @media (max-width: 300px) {
+      @content;
+    }
+  } @else if $tipo == t {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $tipo == d {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.conteiner {
+  margin-top: 50px;
+  background-color: $cor-fundo;
+  height: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  @include shadow(2);
+  @include device(m) {
+    width: 80vw;
+    background-color: #333 !important;
+    height: 300px;
+  }
+  @include device(t) {
+    width: 95vw;
+    height: 500px;
+    background-color: #319;
+  }
+
+  h1.titulo {
+    font-size: 1.7em;
+    color: $primary-color;
+  }
+
+  p {
+    color: $secundary-color;
+    @include type-primary(grande)
+  }
+}
