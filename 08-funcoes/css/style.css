@@ -1,0 +1,68 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.botoes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px;
+  background-color: #333;
+  width: 500px;
+  height: 120px;
+  border-radius: 20px;
+}
+div.botoes button.botao {
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: rgb(141, 99, 248);
+  cursor: pointer;
+  color: white;
+}
+div.botoes button.botao:hover {
+  background-color: #703cf6;
+}
+div.botoes button.botao.ativo {
+  background-color: rgba(141, 99, 248, 0.5);
+}
+
+.texto {
+  background-color: #333;
+  padding: 10px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgb(141, 99, 248);
+}
+.texto p {
+  font-size: 1.25em;
+}

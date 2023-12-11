@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+$cor-primaria: rgb(141, 99, 248);
+
+body {
+  height: 100vh;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+div.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #333;
+  width: 500px;
+  height: 120px;
+  border-radius: 20px;
+
+  button.botao {
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: $cor-primaria;
+    cursor: pointer;
+    color: white;
+    &:hover {
+      // "Darken" para deixarmos a cor mais escura. Em porcentagem
+      // E "lighten" para deixar mais clara. Em porcentagem
+      background-color: darken($cor-primaria, 8%);
+    }
+    &.ativo {
+      // Deixar o elemento transparente
+      background-color: transparentize($cor-primaria, .5);
+    }
+  }
+}
+
+// Criação de funções
+// Recebendo dois argumentos, e o segundo recebendo um valor padrão.
+@function transEm($pixel, $contexto: 16) {
+  @return ($pixel / $contexto) * 1em;
+}
+
+.texto {
+  background-color: #333;
+  padding: 10px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $cor-primaria;
+  p {
+    font-size: transEm(20);
+  }
+}
