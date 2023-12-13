@@ -1,0 +1,43 @@
+// Forma de criar um loop com o scss
+
+@for $c from 1 through 5 {
+  .item-#{$c}{
+    font-size: 10px * $c;
+  }
+}
+
+// for para criação de grids
+$conteiner: 700;
+$gutter: 20;
+$colunas: 5;
+
+@for $c from 1 through $colunas {
+  $width: $conteiner / $colunas * $c - $gutter;
+  .grid-#{$c} {
+    width: $width + px;
+  }
+}
+
+.grid {
+  background-color: #39F;
+  height: 20px;
+  margin: 10px;
+}
+
+// Também temos o loop while que funciona da mesma forma do while do javascript
+$i: 1;
+
+@while $i <= 5 {
+  .while-#{$i} {
+    font-size: 1 * $i + rem;
+  }
+  $i: $i + 1;
+}
+
+$lista: facebook, instagram, whatsapp, twitter;
+
+@each $itemLista in $lista {
+  .rede-#{$itemLista} {
+    background: url('img/#{$itemLista}.png');
+  }
+}
