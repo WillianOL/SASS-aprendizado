@@ -209,7 +209,7 @@
             !c.hasCSS &&
             (c.hasCSS = !!l(
               a,
-              'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}'
+              'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:$preto}template{display:none}'
             )),
           k || q(a, c),
           a
